@@ -4,18 +4,15 @@ import { data } from "../data";
 const Header = () => {
   const [enabled, setEnabled] = useState(true);
   return (
-    <div className="flex justify-between w-[960px] mx-auto">
+    <div className="flex justify-between w-x mx-auto">
       <div className="mt-10">
-        <p
-          style={{ color: "#CBF281" }}
-          className="inline-block text-3xl font-bold"
-        >
-          {data.name}
+        <p className="inline-block text-3xl font-bold text-spcGreen">
+          {data.header.name}
         </p>
       </div>
       <div className="flex justify-between w-80 mt-5">
         <p className="inline-block text-sm font-bold">
-          <span style={{ color: "#CAF181" }}>{data.lang}</span>'YE GEÇ
+          <span className="text-[#CAF181]">{data.header.lang}</span>'YE GEÇ
         </p>
         <div className="flex">
           <label class="inline-block relative items-center mr-5 cursor-pointer">
@@ -37,7 +34,7 @@ const Header = () => {
             className="inline-block text-sm font-bold"
             style={{ color: "#4731d3" }}
           >
-            {data.darkMode}
+            {data.header.darkMode}
           </p>
         </div>
       </div>
