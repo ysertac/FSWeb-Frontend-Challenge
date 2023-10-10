@@ -1,9 +1,11 @@
 import { SHOW_DATA } from "./actions";
 
 const initialStates = {
-  id: 0,
-  name: "noName",
-  who: "Me",
+  first: {
+    id: 0,
+    name: "noName",
+    who: "Me",
+  },
 };
 
 const myReducer = (state = initialStates, action) => {
@@ -11,10 +13,8 @@ const myReducer = (state = initialStates, action) => {
     case SHOW_DATA:
       const newState = {
         ...state,
-        name: "yesName",
+        first: { ...state.first, name: state.first.name + "e" },
       };
-      console.log(state);
-      console.log(newState);
       return newState;
 
     default:
