@@ -98,12 +98,14 @@ export const data = {
   profile: {
     header: "Profile",
     subHeaders: ["Basic Information", "About Me"],
-    dateOfBirth: { def: "Doğum Tarihi", value: "04.02.1996" },
-    city: { def: "İkamet Şehri", value: "Hatay" },
-    education: {
-      def: "Eğitim Durumu",
-      value: "Çukurova University, Electrical & Electronics Engineer",
-    },
-    choice: { def: "Tercih Ettiği Rol", value: "Full Stack Developer" },
+    content: [
+      { def: "Doğum Tarihi", value: "04.02.1996" },
+      { def: "İkamet Şehri", value: "Hatay" },
+      {
+        def: `Eğitim Durumu`,
+        value: "Çukurova University, Electrical & Electronics Engineer",
+      },
+      { def: "Tercih Ettiği Rol", value: "Full Stack Developer" },
+    ],
   },
 };
