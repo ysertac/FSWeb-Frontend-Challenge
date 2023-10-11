@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { showData } from "./actions";
 import Banner from "./components/Banner";
+import Skills from "./components/Skills";
 
 function App() {
   const first = useSelector((store) => store.first);
@@ -14,6 +15,7 @@ function App() {
   return (
     <div className="bg-black text-white mx-auto" style={{ width: "1440px" }}>
       <Banner />
+      <Skills />
     </div>
   );
 }
