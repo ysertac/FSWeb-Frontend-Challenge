@@ -154,4 +154,27 @@ export const data = {
       },
     ],
   },
+  footer: {
+    header: "Send me a message!",
+    text: "Got a question or proposal, or just want to say hello? Go ahead.",
+    email: "ysertac96@gmail.com",
+    icons: [
+      {
+        path: "https://facebook.com/ysertacc",
+        icon: <i class="fa-brands fa-facebook fa-2x"></i>,
+      },
+      {
+        path: "https://instagram.com/ysertacc",
+        icon: <i class="fa-brands fa-instagram fa-2x"></i>,
+      },
+      {
+        path: "https://linkedin.com/in/sertacyildirir",
+        icon: <i class="fa-brands fa-linkedin fa-2x"></i>,
+      },
+      {
+        path: "https://github.com/ysertac",
+        icon: <i class="fa-brands fa-github fa-2x"></i>,
+      },
+    ],
+  },
 };

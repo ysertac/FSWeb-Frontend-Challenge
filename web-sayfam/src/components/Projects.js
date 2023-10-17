@@ -7,8 +7,11 @@ const Projects = () => {
         {data.projects.header}
       </h2>
       {data.projects.projects.map((project) => (
-        <div className="flex w-[960px] mx-auto bg-white rounded-l-lg rounded-r-lg my-10 shadow-2xl">
-          <img src={project.img} className="w-[360px] h-[360px] rounded-l-lg" />
+        <div className="flex w-[960px] mx-auto bg-white rounded-l-2xl rounded-r-2xl my-10 shadow-2xl">
+          <img
+            src={project.img}
+            className="w-[360px] h-[360px] rounded-l-2xl"
+          />
           <div className="pl-10 flex flex-col h-72 my-auto justify-between">
             <h3 className="text-[#433bca] text-3xl leading-8 font-bold">
               {project.header}
