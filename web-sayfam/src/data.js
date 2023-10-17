@@ -11,6 +11,9 @@ import cypress from "./assets/databases_and_tools/brand-cypress.svg";
 import redux from "./assets/databases_and_tools/redux.svg";
 import figma from "./assets/databases_and_tools/figma.svg";
 import git from "./assets/databases_and_tools/git.svg";
+import profileimg from "./assets/profileimg.jpg";
+import pizza from "./assets/pizza.png";
+import ecommerce from "./assets/ecommerce.png";
 
 export const data = {
   header: {
@@ -106,6 +109,49 @@ export const data = {
         value: "Çukurova University, Electrical & Electronics Engineer",
       },
       { def: "Tercih Ettiği Rol", value: "Full Stack Developer" },
+    ],
+    img: profileimg,
+    aboutParagraphs: [
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
+      "Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+    ],
+  },
+  projects: {
+    header: "Projects",
+    projects: [
+      {
+        header: "E-commerce Market Place",
+        links: [
+          {
+            name: "View Site",
+            path: "https://ysmarketplace.vercel.app/",
+          },
+          {
+            name: "gitHub",
+            path: "https://github.com/ysertac/ecommerce.git",
+          },
+        ],
+        sum: `Built a platform that allowed small business owners to see and set pricing in various categories. Wrote code that allowed for making a list of items to sell which would
+        show to all users`,
+        used: ["HTML", "CSS", "JavaScript", "React", "Java", "Spring"],
+        img: ecommerce,
+      },
+      {
+        header: "Teknolojik Yemekler",
+        links: [
+          {
+            name: "View Site",
+            path: "https://techfood.vercel.app/",
+          },
+          {
+            name: "gitHub",
+            path: "https://github.com/ysertac/fsweb-s7-challenge-pizza.git",
+          },
+        ],
+        sum: "Functional and ready to use order form. Developed to get basic principles of React and packages.",
+        used: ["HTML", "CSS", "JavaScript", "React"],
+        img: pizza,
+      },
     ],
   },
 };
