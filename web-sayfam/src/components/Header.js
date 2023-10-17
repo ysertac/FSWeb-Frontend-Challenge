@@ -2,7 +2,16 @@ import { useState } from "react";
 import { data } from "../data";
 
 const Header = () => {
-  const [enabled, setEnabled] = useState(true);
+  const html = document.querySelector("html");
+  const [enabled, setEnabled] = useState(
+    html.classList.contains("dark") ? false : true
+  );
+  html.classList = localStorage.getItem("darkMode");
+  const changeHandler = (e) => {
+    e.preventDefault();
+    html.classList.toggle("dark");
+    localStorage.setItem("darkMode", html.classList);
+  };
   return (
     <div className="flex justify-between w-x mx-auto">
       <div className="mt-10">
@@ -15,12 +24,13 @@ const Header = () => {
           <span className="text-[#CAF181]">{data.header.lang}</span>'YE GEÇ
         </p>
         <div className="flex">
-          <label class="inline-block relative items-center mr-5 cursor-pointer">
+          <label class="inline-block relative items-center mr-5 h-6 cursor-pointer">
             <input
               type="checkbox"
               className="sr-only peer"
               checked={enabled}
               readOnly
+              onChange={changeHandler}
             />
             <div
               onClick={() => {
@@ -34,7 +44,7 @@ const Header = () => {
             className="inline-block text-sm font-bold"
             style={{ color: "#4731d3" }}
           >
-            {data.header.darkMode}
+            {enabled ? data.header.darkMode : data.header.lightMode}
           </p>
         </div>
       </div>

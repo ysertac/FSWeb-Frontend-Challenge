@@ -1,4 +1,4 @@
-import { SHOW_DATA } from "./actions";
+import { DARK_MODE } from "./actions";
 
 const initialStates = {
   first: {
@@ -10,7 +10,7 @@ const initialStates = {
 
 const myReducer = (state = initialStates, action) => {
   switch (action.type) {
-    case SHOW_DATA:
+    case DARK_MODE:
       const newState = {
         ...state,
         first: { ...state.first, name: state.first.name + "e" },

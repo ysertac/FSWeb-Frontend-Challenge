@@ -1,8 +1,8 @@
-export const SHOW_DATA = "veri göster";
+export const DARK_MODE = "dark mode geçiş";
 
 export const showData = (item) => {
   return {
-    type: SHOW_DATA,
+    type: DARK_MODE,
     payload: item,
   };
 };
