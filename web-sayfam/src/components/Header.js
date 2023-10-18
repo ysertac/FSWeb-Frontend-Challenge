@@ -4,6 +4,7 @@ import { data } from "../data";
 const Header = () => {
   const html = document.querySelector("html");
   const [enabled, setEnabled] = useState(() => {
+    console.log(html.classList);
     return html.classList.contains("dark") ? false : true;
   });
   html.classList = localStorage.getItem("darkMode");
