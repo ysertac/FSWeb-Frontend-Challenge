@@ -3,9 +3,9 @@ import { data } from "../data";
 
 const Header = () => {
   const html = document.querySelector("html");
-  const [enabled, setEnabled] = useState(
-    html.classList.contains("dark") ? false : true
-  );
+  const [enabled, setEnabled] = useState(() => {
+    return html.classList.contains("dark") ? false : true;
+  });
   html.classList = localStorage.getItem("darkMode");
   const changeHandler = (e) => {
     e.stopPropagation();
