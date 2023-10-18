@@ -28,18 +28,18 @@ export const data = {
       "...your best solution for the web design and development",
     ],
     pp: pp,
-    buttons: {
-      gitHub: {
+    buttons: [
+      {
         name: "GitHub",
         icon: <i class="fa-brands fa-github"></i>,
         path: "https://github.com/ysertac",
       },
-      in: {
+      {
         name: "LinkedIn",
         icon: <i class="fa-brands fa-linkedin-in"></i>,
         path: "https://linkedin.com/in/sertacyildirir",
       },
-    },
+    ],
   },
   skills: {
     header: "Skills",

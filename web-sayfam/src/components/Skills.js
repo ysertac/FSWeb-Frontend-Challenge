@@ -2,9 +2,9 @@ import { data } from "../data";
 
 const Skills = () => {
   return (
-    <div className="bg-white dark:bg-black">
+    <div className="bg-white dark:bg-spcDark">
       <div className=" text-[#777777] font-medium w-x mx-auto flex justify-between">
-        <h2 className="text-5xl text-[#4832D3] font-bold my-auto">
+        <h2 className="text-5xl text-[#4832D3] dark:text-[#8f88ff] font-bold my-auto">
           {data.skills.header}
         </h2>
 

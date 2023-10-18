@@ -3,12 +3,7 @@ import Header from "./Header";
 
 const Banner = () => {
   return (
-    <div
-      style={{
-        height: "671px",
-        backgroundImage: "linear-gradient(to right, #4731D3 70% , #CBF281 70%)",
-      }}
-    >
+    <div className="h-[671px] bg-headerLightMode dark:bg-headerDarkMode">
       <Header />
       <div className="w-x mx-auto flex justify-between items-end mt-10">
         <div className="mb-5">
@@ -19,25 +14,22 @@ const Banner = () => {
             {data.banner.textContent[1]}
           </p>
           <div className="mt-10">
-            <a
-              className="bg-white text-[#3730A3] p-3 mr-3 border rounded-md font-medium text-lg"
-              href={data.banner.buttons.gitHub.path}
-              target="_blank"
-            >
-              {data.banner.buttons.gitHub.icon}{" "}
-              {data.banner.buttons.gitHub.name}
-            </a>
-            <a
-              className="bg-white text-[#3730A3] p-3 border rounded-md font-medium text-lg"
-              target="_blank"
-              href={data.banner.buttons.in.path}
-            >
-              {data.banner.buttons.in.icon} {data.banner.buttons.in.name}
-            </a>
+            {data.banner.buttons.map((button) => (
+              <a
+                className="bg-white dark:bg-spcDark dark:text-white text-[#3730A3] p-3 mr-3 border rounded-md font-medium text-lg"
+                href={button.path}
+                target="_blank"
+              >
+                {button.icon} {button.name}
+              </a>
+            ))}
           </div>
         </div>
         <div>
-          <img className="rounded-3xl w-[350px]" src={data.banner.pp} />
+          <img
+            className="rounded-3xl w-[350px] shadow-2xl"
+            src={data.banner.pp}
+          />
         </div>
       </div>
     </div>

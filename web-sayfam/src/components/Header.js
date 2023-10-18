@@ -8,7 +8,7 @@ const Header = () => {
   );
   html.classList = localStorage.getItem("darkMode");
   const changeHandler = (e) => {
-    e.preventDefault();
+    e.stopPropagation();
     html.classList.toggle("dark");
     localStorage.setItem("darkMode", html.classList);
   };
@@ -20,8 +20,11 @@ const Header = () => {
         </p>
       </div>
       <div className="flex justify-between w-80 mt-5">
-        <p className="inline-block text-sm font-bold">
-          <span className="text-[#CAF181]">{data.header.lang}</span>'YE GEÇ
+        <p className="inline-block text-sm font-bold text-[#d9d9d9] dark:text-[#777777]">
+          <span className="text-[#CAF181] dark:text-[#BAB2E7]">
+            {data.header.lang}
+          </span>
+          'YE GEÇ
         </p>
         <div className="flex">
           <label class="inline-block relative items-center mr-5 h-6 cursor-pointer">
@@ -40,10 +43,7 @@ const Header = () => {
             ></div>
           </label>
 
-          <p
-            className="inline-block text-sm font-bold"
-            style={{ color: "#4731d3" }}
-          >
+          <p className="inline-block text-sm font-bold text-spcBlue dark:text-[#d9d9d9]">
             {enabled ? data.header.darkMode : data.header.lightMode}
           </p>
         </div>

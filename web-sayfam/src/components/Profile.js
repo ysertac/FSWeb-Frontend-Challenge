@@ -2,7 +2,7 @@ import { data } from "../data";
 
 const Profile = () => {
   return (
-    <div className="bg-spcBlue">
+    <div className="bg-spcBlue dark:bg-spcDarkBlue">
       <div className="w-x mx-auto py-24">
         <h2 className="text-5xl text-spcGreen font-bold pb-6">
           {data.profile.header}
