@@ -13,7 +13,7 @@ const Banner = () => {
           <p className="leading-8 font-normal text-2xl max-mobil:text-xl w-[500px] max-mobil:w-4/5 max-mobil:text-center max-mobil:mx-auto mt-6">
             {data.banner.textContent[1]}
           </p>
-          <div className="mt-10 max-mobil:flex max-mobil:justify-between">
+          <div className="mt-10 2xl:w-64 flex justify-between">
             {data.banner.buttons.map((button) => (
               <a
                 className="bg-white dark:bg-spcDark dark:text-white text-[#3730A3] p-3 border rounded-md font-medium text-lg"
