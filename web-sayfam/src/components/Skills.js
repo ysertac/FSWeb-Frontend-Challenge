@@ -1,11 +1,12 @@
-import { data } from "../data";
+import { data, dataTR } from "../data";
 
-const Skills = () => {
+const Skills = (props) => {
+  const { language } = props;
   return (
     <div className="bg-white dark:bg-spcDark">
       <div className=" text-[#777777] font-medium w-x max-mobil:w-full mx-auto flex max-mobil:flex-col justify-between">
         <h2 className="text-5xl max-mobil:text-3xl text-[#4832D3] dark:text-[#8f88ff] font-bold my-auto max-mobil:text-center max-mobil:pt-8">
-          {data.skills.header}
+          {language.includes("tr") ? dataTR.skills.header : data.skills.header}
         </h2>
 
         {/* Frontend */}

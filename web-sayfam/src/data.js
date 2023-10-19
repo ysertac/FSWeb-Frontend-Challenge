@@ -102,13 +102,13 @@ export const data = {
     header: "Profile",
     subHeaders: ["Basic Information", "About Me"],
     content: [
-      { def: "Doğum Tarihi", value: "04.02.1996" },
-      { def: "İkamet Şehri", value: "Hatay" },
+      { def: "Date of Birth", value: "04.02.1996" },
+      { def: "City", value: "Hatay" },
       {
-        def: `Eğitim Durumu`,
+        def: `Ecudation`,
         value: "Çukurova University, Electrical & Electronics Engineer",
       },
-      { def: "Tercih Ettiği Rol", value: "Full Stack Developer" },
+      { def: "Preference", value: "Full Stack Developer" },
     ],
     img: profileimg,
     aboutParagraphs: [
@@ -157,6 +157,170 @@ export const data = {
   footer: {
     header: "Send me a message!",
     text: "Got a question or proposal, or just want to say hello? Go ahead.",
+    email: "ysertac96@gmail.com",
+    icons: [
+      {
+        path: "https://facebook.com/ysertacc",
+        icon: <i class="fa-brands fa-facebook fa-2x"></i>,
+      },
+      {
+        path: "https://instagram.com/ysertacc",
+        icon: <i class="fa-brands fa-instagram fa-2x"></i>,
+      },
+      {
+        path: "https://linkedin.com/in/sertacyildirir",
+        icon: <i class="fa-brands fa-linkedin fa-2x"></i>,
+      },
+      {
+        path: "https://github.com/ysertac",
+        icon: <i class="fa-brands fa-github fa-2x"></i>,
+      },
+    ],
+  },
+};
+
+export const dataTR = {
+  header: {
+    name: "Sertaç YILDIRIR",
+    lang: "ENGLISH",
+    darkMode: "GECE MODU",
+    lightMode: "GÜNDÜZ MODU",
+  },
+  banner: {
+    textContent: [
+      "Bir Fullstack geliştirici olarak",
+      "web tasarım ve geliştirmede en iyi çözüm ortağınız olmanın gururuyla...",
+    ],
+    pp: pp,
+    buttons: [
+      {
+        name: "GitHub",
+        icon: <i class="fa-brands fa-github"></i>,
+        path: "https://github.com/ysertac",
+      },
+      {
+        name: "LinkedIn",
+        icon: <i class="fa-brands fa-linkedin-in"></i>,
+        path: "https://linkedin.com/in/sertacyildirir",
+      },
+    ],
+  },
+  skills: {
+    header: "Teknik Beceriler",
+    frontend: [
+      {
+        name: "JavaScript",
+        icon: js,
+      },
+      {
+        name: "React",
+        icon: reactIcon,
+      },
+      {
+        name: "HTML",
+        icon: html5,
+      },
+      {
+        name: "CSS",
+        icon: css3,
+      },
+    ],
+    backend: [
+      {
+        name: "Java",
+        icon: java,
+      },
+      {
+        name: "Spring Boot",
+        icon: sb,
+      },
+      {
+        name: "MySQL",
+        icon: mysql,
+      },
+      {
+        name: "SQLite",
+        icon: sqlite,
+      },
+    ],
+    tools: [
+      {
+        name: "Cypress",
+        icon: cypress,
+      },
+      {
+        name: "Redux",
+        icon: redux,
+      },
+      {
+        name: "Figma",
+        icon: figma,
+      },
+      {
+        name: "Git",
+        icon: git,
+      },
+    ],
+  },
+  profile: {
+    header: "Özet",
+    subHeaders: ["Temel Bilgiler", "Hakkımda"],
+    content: [
+      { def: "Doğum Tarihi", value: "04.02.1996" },
+      { def: "İkamet Şehri", value: "Hatay" },
+      {
+        def: `Eğitim Durumu`,
+        value: "Çukurova Üniversitesi, Elektrik-Elektronik Mühendisliği",
+      },
+      { def: "Tercih Ettiği Rol", value: "Full Stack Geliştirici" },
+    ],
+    img: profileimg,
+    aboutParagraphs: [
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
+      "Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+    ],
+  },
+  projects: {
+    header: "Projeler",
+    projects: [
+      {
+        header: "E-commerce Market Place",
+        links: [
+          {
+            name: "View Site",
+            path: "https://ysmarketplace.vercel.app/",
+          },
+          {
+            name: "gitHub",
+            path: "https://github.com/ysertac/ecommerce.git",
+          },
+        ],
+        sum: `Küçük işletmelerin ürünlerini satışa sunmasını ve ilgili ürünün muadillerini görmesini sağlamak amacıyla geliştirildi. Bu sayede işletmeler ürünlerini rahatlıkla bu pazaryeri uygulaması
+        ile satışa sunabilecek ve kullanıcılar da taleplerini daha rahat karşılayabilecek`,
+        used: ["HTML", "CSS", "JavaScript", "React", "Java", "Spring"],
+        img: ecommerce,
+      },
+      {
+        header: "Teknolojik Yemekler",
+        links: [
+          {
+            name: "View Site",
+            path: "https://techfood.vercel.app/",
+          },
+          {
+            name: "gitHub",
+            path: "https://github.com/ysertac/fsweb-s7-challenge-pizza.git",
+          },
+        ],
+        sum: "Fonksiyonel ve kullanıma hazır sipariş formu. React'ın temel prensiplerinin anlaşılması amacıyla geliştirildi.",
+        used: ["HTML", "CSS", "JavaScript", "React"],
+        img: pizza,
+      },
+    ],
+  },
+  footer: {
+    header: "Bana ulaşın!",
+    text: "Bir sorunuz veya bir öneriniz mi var? Ya da sedece merhaba mı demek istiyorsunuz?",
     email: "ysertac96@gmail.com",
     icons: [
       {

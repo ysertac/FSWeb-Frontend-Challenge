@@ -14,14 +14,16 @@ function App() {
   };
 
   //handleState();
-
+  const html = document.querySelector("html");
+  html.lang = localStorage.getItem("language").includes("tr") ? "tr" : "en";
+  const language = localStorage.getItem("language");
   return (
     <div className="bg-white text-white mx-auto">
-      <Banner />
-      <Skills />
-      <Profile />
-      <Projects />
-      <Footer />
+      <Banner html={html} language={language} />
+      <Skills html={html} language={language} />
+      <Profile html={html} language={language} />
+      <Projects html={html} language={language} />
+      <Footer html={html} language={language} />
     </div>
   );
 }
