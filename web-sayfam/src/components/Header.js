@@ -13,21 +13,21 @@ const Header = () => {
     localStorage.setItem("darkMode", html.classList);
   };
   return (
-    <div className="flex justify-between w-x mx-auto">
+    <div className="flex justify-between w-x mx-auto max-mobil:flex-col max-mobil:w-4/5 max-mobil:text-center">
       <div className="mt-10">
         <p className="inline-block text-3xl font-bold text-spcGreen">
           {data.header.name}
         </p>
       </div>
-      <div className="flex justify-between w-80 mt-5">
-        <p className="inline-block text-sm font-bold text-[#d9d9d9] dark:text-[#777777]">
+      <div className="flex justify-between w-80 mt-5 max-mobil:w-4/5 max-mobil:mx-auto">
+        <p className="inline-block text-sm font-bold text-[#d9d9d9] dark:text-[#777777] max-mobil:text-[12px]">
           <span className="text-[#CAF181] dark:text-[#BAB2E7]">
             {data.header.lang}
           </span>
           'YE GEÇ
         </p>
         <div className="flex">
-          <label class="inline-block relative items-center mr-5 h-6 cursor-pointer">
+          <label class="inline-block relative items-center mr-5 h-6 cursor-pointer max-mobil:mr-3 max-mobil:h-4">
             <input
               type="checkbox"
               className="sr-only peer"
@@ -39,11 +39,11 @@ const Header = () => {
               onClick={() => {
                 setEnabled(!enabled);
               }}
-              className="w-11 h-6 bg-gray-700 rounded-full peer  peer-focus:ring-green-100  peer-checked:after:translate-x-full peer-checked:after:border-[#8F88FF] after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-[#FFE86E] after:border-black after:border-2 after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#8F88FF]"
+              className="w-11 max-mobil:w-7 h-6 max-mobil:h-4 bg-gray-700 rounded-full peer  peer-focus:ring-green-100  peer-checked:after:translate-x-full peer-checked:after:border-[#8F88FF] after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-[#FFE86E] after:border-black after:border-2 after:rounded-full after:h-5 max-mobil:after:h-3 after:w-5 max-mobil:after:w-3 after:transition-all peer-checked:bg-[#8F88FF]"
             ></div>
           </label>
 
-          <p className="inline-block text-sm font-bold text-spcBlue dark:text-[#d9d9d9]">
+          <p className="inline-block text-sm font-bold text-spcBlue max-mobil:text-spcGreen dark:text-[#d9d9d9] max-mobil:text-[12px]">
             {enabled ? data.header.darkMode : data.header.lightMode}
           </p>
         </div>

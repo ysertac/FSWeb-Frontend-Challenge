@@ -16,7 +16,7 @@ function App() {
   //handleState();
 
   return (
-    <div className="bg-white text-white mx-auto w-[1440px]">
+    <div className="bg-white text-white mx-auto">
       <Banner />
       <Skills />
       <Profile />

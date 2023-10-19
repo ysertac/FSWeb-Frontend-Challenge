@@ -5,12 +5,15 @@ module.exports = {
   theme: {
     extend: {
       width: {
-        x: "960px",
+        x: "1280px",
         y: "300px",
       },
+      screens: {
+        mobil: "400px",
+      },
       backgroundImage: {
-        headerLightMode: "linear-gradient(to right, #4731D3 70% , #CBF281 70%)",
-        headerDarkMode: "linear-gradient(to right, #171043 70% , #1A210B 70%)",
+        headerLightMode: "linear-gradient(to right, #4731D3 74% , #CBF281 70%)",
+        headerDarkMode: "linear-gradient(to right, #171043 74% , #1A210B 70%)",
       },
       colors: {
         spcGreen: "#CBF281",
