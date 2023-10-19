@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { data, dataTR } from "../data";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
 
 const Header = (props) => {
   const { html, language } = props;
@@ -13,6 +15,53 @@ const Header = (props) => {
     e.stopPropagation();
     html.classList.toggle("dark");
     localStorage.setItem("darkMode", html.classList);
+    localStorage.getItem("darkMode")
+      ? localStorage.getItem("darkMode").includes("dark")
+        ? toast(
+            language.includes("tr")
+              ? "Gece Moduna Geçildi"
+              : "Switched Dark Mode",
+            {
+              position: "top-center",
+              autoClose: 3000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+            }
+          )
+        : toast(
+            language.includes("tr")
+              ? "Gündüz Moduna Geçildi"
+              : "Switched Light Mode",
+            {
+              position: "top-center",
+              autoClose: 3000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            }
+          )
+      : toast(
+          language.includes("tr")
+            ? "Gündüz Moduna Geçildi"
+            : "Switched Light Mode",
+          {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          }
+        );
   };
 
   const langHandler = (e) => {
@@ -20,6 +69,39 @@ const Header = (props) => {
     localStorage.setItem("language", html.lang);
     window.location.reload();
   };
+
+  useEffect(() => {
+    language.includes("tr")
+      ? toast("Türkçe'ye geçildi!", {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: localStorage.getItem("darkMode")
+            ? localStorage.getItem("darkMode").includes("dark")
+              ? "dark"
+              : "light"
+            : "light",
+        })
+      : toast("Switched English!", {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: localStorage.getItem("darkMode")
+            ? localStorage.getItem("darkMode").includes("dark")
+              ? "dark"
+              : "light"
+            : "light",
+        });
+  }, []);
+
   return (
     <div className="flex justify-between w-x mx-auto max-mobil:flex-col max-mobil:w-4/5 max-mobil:text-center">
       <div className="mt-10">
@@ -53,7 +135,6 @@ const Header = (props) => {
               className="w-11 max-mobil:w-7 h-6 max-mobil:h-4 bg-gray-700 rounded-full peer  peer-focus:ring-green-100  peer-checked:after:translate-x-full peer-checked:after:border-[#8F88FF] after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-[#FFE86E] after:border-black after:border-2 after:rounded-full after:h-5 max-mobil:after:h-3 after:w-5 max-mobil:after:w-3 after:transition-all peer-checked:bg-[#8F88FF]"
             ></div>
           </label>
-
           <p className="inline-block text-sm font-bold text-spcBlue max-mobil:text-spcGreen dark:text-[#d9d9d9] max-mobil:text-[12px]">
             {language.includes("tr")
               ? enabled
@@ -63,6 +144,7 @@ const Header = (props) => {
               ? data.header.darkMode
               : data.header.lightMode}
           </p>
+          <ToastContainer />
         </div>
       </div>
     </div>
