@@ -15,8 +15,10 @@ function App() {
 
   //handleState();
   const html = document.querySelector("html");
-  html.lang = localStorage.getItem("language").includes("tr") ? "tr" : "en";
-  const language = localStorage.getItem("language");
+  const language = localStorage.getItem("language")
+    ? localStorage.getItem("language")
+    : "en";
+  html.lang = language ? language : "en";
   return (
     <div className="bg-white text-white mx-auto">
       <Banner html={html} language={language} />

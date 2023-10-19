@@ -4,7 +4,9 @@ import { data, dataTR } from "../data";
 const Header = (props) => {
   const { html, language } = props;
   const [enabled, setEnabled] = useState(
-    !localStorage.getItem("darkMode").includes("dark")
+    localStorage.getItem("darkMode")
+      ? !localStorage.getItem("darkMode").includes("dark")
+      : true
   );
   html.classList = localStorage.getItem("darkMode");
   const changeHandler = (e) => {
