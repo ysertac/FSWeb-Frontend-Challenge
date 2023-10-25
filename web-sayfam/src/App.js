@@ -1,8 +1,11 @@
-import Banner from "./components/Banner";
-import Skills from "./components/Skills";
-import Profile from "./components/Profile";
-import Projects from "./components/Projects";
-import Footer from "./components/Footer";
+import Banner from "./layouts/Banner";
+import Skills from "./layouts/Skills";
+import Profile from "./layouts/Profile";
+import Projects from "./layouts/Projects";
+import Footer from "./layouts/Footer";
+import axios from "axios";
+import { useEffect, useState } from "react";
+const url = "https://api.github.com/users/ysertac";
 
 function App() {
   //handleState();
@@ -11,12 +14,31 @@ function App() {
     ? localStorage.getItem("language")
     : "en";
   html.lang = language ? language : "en";
+
+  const [profile, setProfile] = useState({});
+  const [repos, setRepos] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(url)
+      .then((res) => setProfile(res.data))
+      .catch((err) => console.log(err));
+    axios
+      .get(`${url}/starred`)
+      .then((res) => setRepos(res.data))
+      .catch((err) => console.log(err));
+  }, []);
+
+  console.log(profile);
+  console.log(repos);
+  console.log(profile.avatar_url);
+
   return (
     <div className="bg-white text-white mx-auto">
-      <Banner html={html} language={language} />
+      <Banner html={html} language={language} profile={profile} />
       <Skills language={language} />
       <Profile language={language} />
-      <Projects language={language} />
+      <Projects language={language} repos={repos} />
       <Footer language={language} />
     </div>
   );

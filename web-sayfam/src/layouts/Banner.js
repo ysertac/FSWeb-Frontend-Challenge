@@ -2,10 +2,10 @@ import { data, dataTR } from "../data";
 import Header from "./Header";
 
 const Banner = (props) => {
-  const { html, language } = props;
+  const { html, language, profile } = props;
   return (
     <div className="h-[671px] max-mobil:h-[900px] bg-headerLightMode dark:bg-headerDarkMode max-mobil:bg-spcBlue dark:max-mobil:bg-spcDarkBlue dark:max-mobil:bg-none max-[540px]:bg-none">
-      <Header html={html} language={language} />
+      <Header html={html} language={language} profile={profile} />
       <div className="w-x max-mobil:w-full max-mobil:h-[700px] mx-auto flex max-mobil:flex-col-reverse justify-between max-mobil:justify-between items-end max-mobil:items-start mt-10">
         <div className="mb-5 max-mobil:w-4/5 max-mobil:mx-auto max-mobil:text-center">
           <p className="text-spcGreen text-[54px] max-mobil:text-3xl w-[500px] max-mobil:w-4/5 max-mobil:text-center font-bold leading-[60px] max-mobil:mx-auto">
@@ -33,7 +33,7 @@ const Banner = (props) => {
         <div className="max-mobil:w-11/12 max-mobil:mx-auto">
           <img
             className="rounded-3xl w-[350px] max-mobil:w-11/12 shadow-2xl max-mobil:mx-auto"
-            src={data.banner.pp}
+            src={profile.avatar_url}
           />
         </div>
       </div>

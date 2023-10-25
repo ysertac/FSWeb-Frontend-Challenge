@@ -1,4 +1,3 @@
-import pp from "./assets/Ekran görüntüsü 2023-08-09 172052.png";
 import js from "./assets/languages_icon/javascript.svg";
 import reactIcon from "./assets/languages_icon/reactjs.svg";
 import html5 from "./assets/languages_icon/html5.svg";
@@ -17,7 +16,6 @@ import ecommerce from "./assets/ecommerce.png";
 
 export const data = {
   header: {
-    name: "Sertaç YILDIRIR",
     lang: "TÜRKÇE",
     darkMode: "DARK MODE",
     lightMode: "LIGHT MODE",
@@ -27,7 +25,6 @@ export const data = {
       "I am a Fullstack Developer ",
       "...your best solution for the web design and development",
     ],
-    pp: pp,
     buttons: [
       {
         name: "GitHub",
@@ -181,7 +178,6 @@ export const data = {
 
 export const dataTR = {
   header: {
-    name: "Sertaç YILDIRIR",
     lang: "ENGLISH",
     darkMode: "GECE MODU",
     lightMode: "GÜNDÜZ MODU",
@@ -191,7 +187,6 @@ export const dataTR = {
       "Bir Fullstack geliştirici olarak",
       "web tasarım ve geliştirmede en iyi çözüm ortağınız olmanın gururuyla...",
     ],
-    pp: pp,
     buttons: [
       {
         name: "GitHub",

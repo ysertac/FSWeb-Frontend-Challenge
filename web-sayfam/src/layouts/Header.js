@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import { data, dataTR } from "../data";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
+import axios from "axios";
 
 const Header = (props) => {
-  const { html, language } = props;
+  const { html, language, profile } = props;
   const [enabled, setEnabled] = useState(
     localStorage.getItem("darkMode")
       ? !localStorage.getItem("darkMode").includes("dark")
@@ -100,13 +101,13 @@ const Header = (props) => {
               : "light"
             : "light",
         });
-  }, []);
+  }, [language]);
 
   return (
     <div className="flex justify-between w-x mx-auto max-mobil:flex-col max-mobil:w-4/5 max-mobil:text-center">
       <div className="mt-10">
         <p className="inline-block text-3xl font-bold text-spcGreen">
-          {data.header.name}
+          {profile.name}
         </p>
       </div>
       <div className="flex justify-between w-80 mt-5 max-mobil:w-4/5 max-mobil:mx-auto">
