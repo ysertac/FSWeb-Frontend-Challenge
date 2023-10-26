@@ -14,7 +14,7 @@ const Project = (props) => {
   }, [project]);
 
   return (
-    <div className="flex max-mobil:flex-col w-x max-mobil:w-11/12 mx-auto bg-white dark:bg-[#2b2727] rounded-2xl my-16 shadow-2xl max-mobil:h-[750px]">
+    <div className="flex max-mobil:flex-col w-x max-mobil:w-11/12 mx-auto bg-white dark:bg-[#2b2727] rounded-2xl my-16 shadow-2xl max-mobil:h-[750px] bg-gray-300">
       <img
         src={projectImage}
         className="w-2/5 max-mobil:w-full h-[480px] max-mobil:h-2/5 xl:rounded-l-2xl max-mobil:rounded-t-2xl"
