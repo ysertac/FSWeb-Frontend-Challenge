@@ -17,9 +17,9 @@ const Project = (props) => {
     <div className="flex max-mobil:flex-col w-x max-mobil:w-11/12 mx-auto bg-white dark:bg-[#2b2727] rounded-2xl my-16 shadow-2xl max-mobil:h-[750px]">
       <img
         src={projectImage}
-        className="w-2/5 max-mobil:w-full h-[480px] max-mobil:h-[90vw] xl:rounded-l-2xl max-mobil:rounded-t-2xl"
+        className="w-2/5 max-mobil:w-full h-[480px] max-mobil:h-2/5 xl:rounded-l-2xl max-mobil:rounded-t-2xl"
       />
-      <div className="px-10 flex flex-col h-72 max-mobil:h-[600px] my-auto max-mobil:my-5 justify-between">
+      <div className="px-10 flex flex-col h-72 max-mobil:h-3/5 my-auto max-mobil:my-5 justify-between">
         <h3 className="text-[#433bca] dark:text-[#c1baed] text-3xl max-mobil:text-2xl max-mobil:text-center leading-8 font-bold">
           {project.name}
         </h3>
