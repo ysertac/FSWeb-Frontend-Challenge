@@ -1,5 +1,4 @@
 import axios from "axios";
-import { data } from "../data";
 import { useEffect, useState } from "react";
 
 const Project = (props) => {
