@@ -10,13 +10,9 @@ const Projects = (props) => {
           ? dataTR.projects.header
           : data.projects.header}
       </h2>
-      {language.includes("tr")
-        ? dataTR.projects.projects.map((project) => (
-            <Project project={project} />
-          ))
-        : data.projects.projects.map((project) => (
-            <Project project={project} />
-          ))}
+      {repos.map((project) => (
+        <Project project={project} />
+      ))}
     </div>
   );
 };

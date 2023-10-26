@@ -11,8 +11,6 @@ import redux from "./assets/databases_and_tools/redux.svg";
 import figma from "./assets/databases_and_tools/figma.svg";
 import git from "./assets/databases_and_tools/git.svg";
 import profileimg from "./assets/profileimg.jpg";
-import pizza from "./assets/pizza.png";
-import ecommerce from "./assets/ecommerce.png";
 
 export const data = {
   header: {
@@ -115,41 +113,6 @@ export const data = {
   },
   projects: {
     header: "Projects",
-    projects: [
-      {
-        header: "E-commerce Market Place",
-        links: [
-          {
-            name: "View Site",
-            path: "https://ysmarketplace.vercel.app/",
-          },
-          {
-            name: "gitHub",
-            path: "https://github.com/ysertac/ecommerce.git",
-          },
-        ],
-        sum: `Built a platform that allowed small business owners to see and set pricing in various categories. Wrote code that allowed for making a list of items to sell which would
-        show to all users`,
-        used: ["HTML", "CSS", "JavaScript", "React", "Java", "Spring"],
-        img: ecommerce,
-      },
-      {
-        header: "Teknolojik Yemekler",
-        links: [
-          {
-            name: "View Site",
-            path: "https://techfood.vercel.app/",
-          },
-          {
-            name: "gitHub",
-            path: "https://github.com/ysertac/fsweb-s7-challenge-pizza.git",
-          },
-        ],
-        sum: "Functional and ready to use order form. Developed to get basic principles of React and packages.",
-        used: ["HTML", "CSS", "JavaScript", "React"],
-        img: pizza,
-      },
-    ],
   },
   footer: {
     header: "Send me a message!",
@@ -277,41 +240,6 @@ export const dataTR = {
   },
   projects: {
     header: "Projeler",
-    projects: [
-      {
-        header: "E-commerce Market Place",
-        links: [
-          {
-            name: "View Site",
-            path: "https://ysmarketplace.vercel.app/",
-          },
-          {
-            name: "gitHub",
-            path: "https://github.com/ysertac/ecommerce.git",
-          },
-        ],
-        sum: `Küçük işletmelerin ürünlerini satışa sunmasını ve ilgili ürünün muadillerini görmesini sağlamak amacıyla geliştirildi. Bu sayede işletmeler ürünlerini rahatlıkla bu pazaryeri uygulaması
-        ile satışa sunabilecek ve kullanıcılar da taleplerini daha rahat karşılayabilecek`,
-        used: ["HTML", "CSS", "JavaScript", "React", "Java", "Spring"],
-        img: ecommerce,
-      },
-      {
-        header: "Teknolojik Yemekler",
-        links: [
-          {
-            name: "View Site",
-            path: "https://techfood.vercel.app/",
-          },
-          {
-            name: "gitHub",
-            path: "https://github.com/ysertac/fsweb-s7-challenge-pizza.git",
-          },
-        ],
-        sum: "Fonksiyonel ve kullanıma hazır sipariş formu. React'ın temel prensiplerinin anlaşılması amacıyla geliştirildi.",
-        used: ["HTML", "CSS", "JavaScript", "React"],
-        img: pizza,
-      },
-    ],
   },
   footer: {
     header: "Bana ulaşın!",

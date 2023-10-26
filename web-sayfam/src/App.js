@@ -6,6 +6,7 @@ import Footer from "./layouts/Footer";
 import axios from "axios";
 import { useEffect, useState } from "react";
 const url = "https://api.github.com/users/ysertac";
+const imgPath = "./assets/ecommerce.png";
 
 function App() {
   //handleState();
@@ -24,14 +25,10 @@ function App() {
       .then((res) => setProfile(res.data))
       .catch((err) => console.log(err));
     axios
-      .get(`${url}/starred`)
+      .get(`${url}/starred?direction=asc`)
       .then((res) => setRepos(res.data))
       .catch((err) => console.log(err));
   }, []);
-
-  console.log(profile);
-  console.log(repos);
-  console.log(profile.avatar_url);
 
   return (
     <div className="bg-white text-white mx-auto">
