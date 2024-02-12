@@ -14,6 +14,9 @@ const Footer = (props) => {
         <p className="font-medium text-xl max-mobil:text-lg leading-6 text-spcBlue dark:text-[#8f88ff] underline pt-5">
           {data.footer.email}
         </p>
+        <p className="font-medium text-xl max-mobil:text-lg leading-6 text-spcBlue dark:text-[#8f88ff] pt-5">
+          {data.footer.mobile}
+        </p>
         <div className="flex justify-between w-52 mx-auto pt-5">
           {data.footer.icons.map((icon) => (
             <a href={icon.path} className="text-spcBlue dark:text-[#8f88ff]">

@@ -11,6 +11,14 @@ import redux from "./assets/databases_and_tools/redux.svg";
 import figma from "./assets/databases_and_tools/figma.svg";
 import git from "./assets/databases_and_tools/git.svg";
 import profileimg from "./assets/profileimg.jpg";
+import ts from "./assets/databases_and_tools/typescript.svg";
+import sass from "./assets/databases_and_tools/sass.svg";
+import angular from "./assets/languages_icon/angular.svg";
+import postgresql from "./assets/databases_and_tools/postgresql.svg";
+import babel from "./assets/databases_and_tools/babeljs.svg";
+import postman from "./assets/databases_and_tools/postman.svg";
+import photoshop from "./assets/databases_and_tools/photoshop.svg";
+import node from "./assets/languages_icon/nodejs.svg";
 
 export const data = {
   header: {
@@ -42,54 +50,110 @@ export const data = {
       {
         name: "JavaScript",
         icon: js,
+        link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       },
       {
         name: "React",
         icon: reactIcon,
+        link: "https://react.dev/",
       },
       {
         name: "HTML",
         icon: html5,
+        link: "https://www.w3schools.com/html/",
       },
       {
         name: "CSS",
         icon: css3,
+        link: "https://www.w3schools.com/css/",
+      },
+    ],
+    mid: [
+      {
+        name: "TypeScript",
+        icon: ts,
+        link: "https://www.typescriptlang.org/",
+      },
+      {
+        name: "Angular",
+        icon: angular,
+        link: "https://angular.io/",
+      },
+      {
+        name: "Sass",
+        icon: sass,
+        link: "https://sass-lang.com/",
+      },
+      {
+        name: "PostgreSQL",
+        icon: postgresql,
+        link: "https://www.postgresql.org/",
       },
     ],
     backend: [
       {
         name: "Java",
         icon: java,
+        link: "https://www.java.com/tr/",
       },
       {
         name: "Spring Boot",
         icon: sb,
+        link: "https://spring.io/",
       },
       {
         name: "MySQL",
         icon: mysql,
+        link: "https://www.mysql.com/",
       },
       {
         name: "SQLite",
         icon: sqlite,
+        link: "https://www.sqlite.org/index.html",
       },
     ],
     tools: [
       {
         name: "Cypress",
         icon: cypress,
+        link: "https://www.cypress.io/",
       },
       {
         name: "Redux",
         icon: redux,
+        link: "https://redux.js.org/",
       },
       {
         name: "Figma",
         icon: figma,
+        link: "https://www.figma.com/",
       },
       {
         name: "Git",
         icon: git,
+        link: "https://git-scm.com/",
+      },
+    ],
+    tools2: [
+      {
+        name: "Node.js",
+        icon: node,
+        link: "https://nodejs.org/en",
+      },
+      {
+        name: "Postman",
+        icon: postman,
+        link: "https://www.postman.com/",
+      },
+      {
+        name: "Photoshop",
+        icon: photoshop,
+        link: "https://www.adobe.com/products/photoshop.html?promoid=RBS7NL7F&mv=other",
+      },
+      {
+        name: "Babel",
+        icon: babel,
+        link: "https://babeljs.io/",
       },
     ],
   },
@@ -107,8 +171,8 @@ export const data = {
     ],
     img: profileimg,
     aboutParagraphs: [
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
-      "Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+      `Hello. I am a software developer who is working on software projects actively. My greatest ideal is improving myself always. In this way I am open to all opportunity to provide this to me.`,
+      `I want to work with people who are following the new technologies and compatible with teamwork. So I evaluate job opportunities that fit for me.`,
     ],
   },
   projects: {
@@ -118,6 +182,7 @@ export const data = {
     header: "Send me a message!",
     text: "Got a question or proposal, or just want to say hello? Go ahead.",
     email: "ysertac96@gmail.com",
+    mobile: "+90 535 741 45 11",
     icons: [
       {
         path: "https://facebook.com/ysertacc",
@@ -164,61 +229,12 @@ export const dataTR = {
     ],
   },
   skills: {
-    header: "Teknik Beceriler",
-    frontend: [
-      {
-        name: "JavaScript",
-        icon: js,
-      },
-      {
-        name: "React",
-        icon: reactIcon,
-      },
-      {
-        name: "HTML",
-        icon: html5,
-      },
-      {
-        name: "CSS",
-        icon: css3,
-      },
-    ],
-    backend: [
-      {
-        name: "Java",
-        icon: java,
-      },
-      {
-        name: "Spring Boot",
-        icon: sb,
-      },
-      {
-        name: "MySQL",
-        icon: mysql,
-      },
-      {
-        name: "SQLite",
-        icon: sqlite,
-      },
-    ],
-    tools: [
-      {
-        name: "Cypress",
-        icon: cypress,
-      },
-      {
-        name: "Redux",
-        icon: redux,
-      },
-      {
-        name: "Figma",
-        icon: figma,
-      },
-      {
-        name: "Git",
-        icon: git,
-      },
-    ],
+    header: (
+      <>
+        <p>Teknik</p>
+        <p>Beceriler</p>
+      </>
+    ),
   },
   profile: {
     header: "Özet",
@@ -234,8 +250,8 @@ export const dataTR = {
     ],
     img: profileimg,
     aboutParagraphs: [
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
-      "Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+      `Merhaba. Yazılım projelerinde aktif olarak çalışan bir yazılım geliştiriciyim. En büyük idealim sürekli kendimi geliştirmek. Bu doğrultuda karşıma çıkacak tüm fırsatlara açığım.`,
+      `Yeni teknolojileri takip eden ve ekip çalışmasına önem veren kişilerle çalışmak isterim. Bunları sağlayabilecek iş fırsatlarını değerlendiriyorum.`,
     ],
   },
   projects: {

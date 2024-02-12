@@ -53,11 +53,15 @@ const Profile = (props) => {
                 ? dataTR.profile.subHeaders[1]
                 : data.profile.subHeaders[1]}
             </h3>
-            <p className="text-lg font-normal">
-              {data.profile.aboutParagraphs[0]}
+            <p className="text-md font-normal text-justify">
+              {language.includes("tr")
+                ? dataTR.profile.aboutParagraphs[0]
+                : data.profile.aboutParagraphs[0]}
             </p>
-            <p className="text-lg font-normal">
-              {data.profile.aboutParagraphs[1]}
+            <p className="text-md font-normal text-justify">
+              {language.includes("tr")
+                ? dataTR.profile.aboutParagraphs[1]
+                : data.profile.aboutParagraphs[1]}
             </p>
           </div>
         </div>
