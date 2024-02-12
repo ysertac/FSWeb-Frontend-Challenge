@@ -10,9 +10,9 @@ const Skills = (props) => {
         </h2>
 
         {/* Frontend */}
-        <div className="inline-block my-10 max-mobil:flex max-mobil:w-4/5 max-mobil:justify-between max-mobil:mx-auto">
+        <div className="inline-block my-10 max-mobil:my-4 max-mobil:flex max-mobil:w-4/5 max-mobil:justify-between max-mobil:mx-auto">
           {data.skills.frontend.map((skill) => (
-            <a className="my-6 block" href={skill.link}>
+            <a className="my-6 block" href={skill.link} target="_blank">
               <img
                 className="w-16 max-mobil:w-12 inline-block"
                 src={skill.icon}
@@ -25,9 +25,9 @@ const Skills = (props) => {
         </div>
 
         {/* Mid */}
-        <div className="inline-block my-10 max-mobil:flex max-mobil:w-4/5 max-mobil:justify-between max-mobil:mx-auto">
+        <div className="inline-block my-10 max-mobil:my-4 max-mobil:flex max-mobil:w-4/5 max-mobil:justify-between max-mobil:mx-auto">
           {data.skills.mid.map((skill) => (
-            <a className="my-6 block" href={skill.link}>
+            <a className="my-6 block" href={skill.link} target="_blank">
               <img
                 className="w-16 max-mobil:w-12 inline-block"
                 src={skill.icon}
@@ -40,9 +40,9 @@ const Skills = (props) => {
         </div>
 
         {/* Backend */}
-        <div className="inline-block my-10 max-mobil:flex max-mobil:w-4/5 max-mobil:justify-between max-mobil:mx-auto">
+        <div className="inline-block my-10 max-mobil:my-4 max-mobil:flex max-mobil:w-4/5 max-mobil:justify-between max-mobil:mx-auto">
           {data.skills.backend.map((skill) => (
-            <a className="my-6 block" href={skill.link}>
+            <a className="my-6 block" href={skill.link} target="_blank">
               <img
                 className="w-16 max-mobil:w-12 inline-block"
                 src={skill.icon}
@@ -55,9 +55,9 @@ const Skills = (props) => {
         </div>
 
         {/* Other Tools */}
-        <div className="inline-block my-10 max-mobil:flex max-mobil:w-4/5 max-mobil:justify-between max-mobil:mx-auto">
+        <div className="inline-block my-10 max-mobil:my-4 max-mobil:flex max-mobil:w-4/5 max-mobil:justify-between max-mobil:mx-auto">
           {data.skills.tools.map((skill) => (
-            <a className="my-6 block" href={skill.link}>
+            <a className="my-6 block" href={skill.link} target="_blank">
               <img
                 className="w-16 max-mobil:w-12 inline-block"
                 src={skill.icon}
@@ -70,9 +70,9 @@ const Skills = (props) => {
         </div>
 
         {/* Other Tools 2 */}
-        <div className="inline-block my-10 max-mobil:flex max-mobil:w-4/5 max-mobil:justify-between max-mobil:mx-auto">
+        <div className="inline-block my-10 max-mobil:my-4 max-mobil:flex max-mobil:w-4/5 max-mobil:justify-between max-mobil:mx-auto">
           {data.skills.tools2.map((skill) => (
-            <a className="my-6 block" href={skill.link}>
+            <a className="my-6 block" href={skill.link} target="_blank">
               <img
                 className="w-16 max-mobil:w-12 inline-block"
                 src={skill.icon}
